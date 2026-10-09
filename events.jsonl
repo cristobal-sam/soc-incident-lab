@@ -1,0 +1,8 @@
+{"timestamp":"2026-01-01T12:00:00Z","kind":"auth_failure","src_ip":"192.0.2.10","user":"lab-user","host":"win-lab"}
+{"timestamp":"2026-01-01T12:00:20Z","kind":"auth_failure","src_ip":"192.0.2.10","user":"lab-user","host":"win-lab"}
+{"timestamp":"2026-01-01T12:00:40Z","kind":"auth_failure","src_ip":"192.0.2.10","user":"lab-user","host":"win-lab"}
+{"timestamp":"2026-01-01T12:01:00Z","kind":"auth_failure","src_ip":"192.0.2.10","user":"lab-user","host":"win-lab"}
+{"timestamp":"2026-01-01T12:01:20Z","kind":"auth_failure","src_ip":"192.0.2.10","user":"lab-user","host":"win-lab"}
+{"timestamp":"2026-01-01T12:02:00Z","kind":"auth_success","src_ip":"192.0.2.10","user":"lab-user","host":"win-lab"}
+{"timestamp":"2026-01-01T12:02:10Z","kind":"process","host":"win-lab","image":"powershell.exe","command_line":"powershell.exe -EncodedCommand SYNTHETIC_PLACEHOLDER_NOT_EXECUTABLE"}
+{"timestamp":"2026-01-01T12:02:20Z","kind":"ids_alert","host":"sensor-lab","signature_id":1000001}
