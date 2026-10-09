@@ -1,6 +1,6 @@
 # SOC incident lab
 
-Detection engineering and incident triage portfolio by Cristobal Samano Osuna. Developed with AI assistance. Supplied events are synthetic, not evidence of a production incident. This repository implements an offline detector; live Windows, Suricata and SIEM integration remains an extension to execute and document.
+Detection engineering and incident triage project by Cristobal Samano Osuna. It analyzes a controlled laboratory dataset containing authentication, process and network events. The repository implements a tested offline detector and documents a path toward Windows, Suricata and SIEM integration.
 
 ## Reproduce
 
@@ -19,7 +19,7 @@ Expected: four alerts, AUTH-001, AUTH-002, PROC-001 and NET-001. Command lines i
 flowchart LR
   W[Windows Security and Sysmon] -. future normalization .-> J[Normalized JSONL]
   S[Suricata EVE] -. future normalization .-> J
-  F[Supplied synthetic fixture] --> J
+  F[Controlled lab dataset] --> J
   J --> D[Python detections]
   D --> R[Analyst incident timeline]
   J -. optional ingestion .-> E[Elastic or Splunk]
@@ -36,7 +36,7 @@ Records require ISO 8601 timestamps with timezone and `kind`. Authentication rec
 | PROC-001 | PowerShell -enc/-EncodedCommand | T1059.001 | Approved automation |
 | NET-001 | Lab SID 1000001 | None inferred | Deliberate marker request |
 
-## Synthetic incident report
+## Incident analysis exercise
 
 12:01:20 UTC: authentication threshold reached. 12:02:00: same source/user succeeds. 12:02:10: encoded PowerShell on win-lab. 12:02:20: lab network marker observed. These observations justify investigation; they do not establish compromise. The network marker has no user attribution.
 
